@@ -1,3 +1,1 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * app.js */
+// code to use constructors in other files
