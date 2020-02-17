@@ -21,4 +21,12 @@ class Game {
 
         return fivePhrases;
     };
+
+    /**
+    * Selects random phrase from the phrases property
+    * @return {Object} Phrase object chosen by random through function is used
+    */
+    getRandomPhrase() {
+        return this.phrases[Math.floor(Math.random() * this.phrases.length)];
+    };
 }
