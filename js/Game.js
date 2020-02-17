@@ -1,6 +1,6 @@
 // Game constructor
 class Game {
-    constructor(missed, phrases, activePhrase){
+    constructor(){
         this.missed = 0;
         this.phrases = this.createPhrases();
         this.activePhrase = null;
@@ -46,15 +46,23 @@ class Game {
     won
     */
     checkForWin() {
+        const letters = document.querySelectorAll('.letter');
+        const matched = document.querySelectorAll('.show');
+
+        if(letters.length === matched.length){
+            return true;
+        } else {
+            return false;
+        }
+    };
 
     /**
     * Increases the value of the missed property
     * Removes a life from the scoreboard
     * Checks if player has remaining lives and ends game if player is out
     */
-    };
     removeLife() {
-
+        
     };
 
     /**
