@@ -26,11 +26,29 @@ class Phrase {
         });
     }
 
-    checkLetter(){
-
+    /**
+    * Checks if passed letter is in the phrase
+    * @param (string) letter - Letter to check
+    */
+    checkLetter(letter){
+        if(this.phrase.includes(letter)){
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    showMatchedLetter(){
-
+    /**
+    * Displays passed letter on screen after a match is found
+    * @param (string) letter - Letter to display after match
+    */
+    showMatchedLetter(letter){
+        const lettersInPhrase = document.querySelectorAll(`.${letter}`);
+        if(this.checkLetter(letter)){
+            for(let i=0; i<lettersInPhrase.length; i++){
+                lettersInPhrase[i].classList.add('show');
+                lettersInPhrase[i].classList.remove('hide');
+            }
+        }
     }
 }
