@@ -62,7 +62,15 @@ class Game {
     * Checks if player has remaining lives and ends game if player is out
     */
     removeLife() {
-        
+        this.missed += 1;
+        let hearts = document.querySelectorAll('.tries');
+        let heartsImg = hearts.firstChild;
+        hearts.classList.remove('tries');
+        heartsImg.src = 'images/lostHeart.png';
+
+        if(this.missed === 5){
+            this.gameOver('false');
+        }
     };
 
     /**
@@ -70,6 +78,6 @@ class Game {
     * @param {boolean} gameWon - Whether or not the user won the game
     */
     gameOver(gameWon) {
-
+        
     }
 }
