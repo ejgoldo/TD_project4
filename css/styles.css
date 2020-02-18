@@ -202,3 +202,22 @@ button {
 .lose a {
   color: var(--color-lose);
 }
+
+
+/* new style changes */
+.lose {
+  background-color: red;
+}
+
+.wrong {
+  background-color: red;
+  filter: blur();
+}
+
+.title {
+  font-style: oblique;
+}
+
+.header {
+  font-style: oblique;
+}
