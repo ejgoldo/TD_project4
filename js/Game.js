@@ -63,13 +63,13 @@ class Game {
     */
     removeLife() {
         this.missed += 1;
-        let hearts = document.querySelectorAll('.tries');
+        let hearts = document.querySelector('.tries');
         let heartsImg = hearts.firstChild;
         hearts.classList.remove('tries');
         heartsImg.src = 'images/lostHeart.png';
 
         if(this.missed === 5){
-            this.gameOver('false');
+            this.gameOver(false);
         }
     };
 
@@ -78,6 +78,21 @@ class Game {
     * @param {boolean} gameWon - Whether or not the user won the game
     */
     gameOver(gameWon) {
-        
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'flex';
+        overlay.classList.remove('start');
+        const h1 = document.getElementById('game-over-message');
+
+        if(gameWon){
+            overlay.classList.add('win');
+            overlay.classList.remove('lose');
+            let message = 'Congrats, you won!';
+            h1.textContent = message;
+        } else {
+            overlay.classList.add('lose');
+            overlay.classList.remove('win');
+            let message = 'You lose, better luck next time';
+            h1.textContent = message;
+        }
     }
 }
