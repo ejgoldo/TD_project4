@@ -12,11 +12,11 @@ class Game {
     */
     createPhrases() {
         const fivePhrases = [
-            new Phrase('May the force be with you'),
-            new Phrase('Im the king of the world'),
-            new Phrase('Keep your friends close but your enemies closer'),
-            new Phrase('Just keep swimming'),
-            new Phrase('You talking to me')
+            new Phrase('may the force be with you'),
+            new Phrase('im the king of the world'),
+            new Phrase('keep your friends close but your enemies closer'),
+            new Phrase('just keep swimming'),
+            new Phrase('you talking to me')
         ];
 
         return fivePhrases;
