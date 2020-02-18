@@ -95,4 +95,12 @@ class Game {
             h1.textContent = message;
         }
     }
+
+    /**
+    * Handles onscreen keyboard button clicks
+    * @param (HTMLButtonElement) button - The clicked button element
+    */
+    handleInteraction(button) {
+        console.log(button);
+    };
 }
