@@ -16,3 +16,17 @@ qwerty.addEventListener('click', (event) => {
         game.handleInteraction(e);
     }
 });
+
+// allows user to use the keyboard besides the on-screen keyboard
+document.addEventListener('keydown', (event) => {
+    const keys = document.querySelectorAll('.key');
+    for(let i=0; i<keys.length; i++){
+        if(event.key === keys[i].textContent){
+            if(keys[i].disabled === false){
+                game.handleInteraction(keys[i]);
+            } else {
+                return false;
+            }
+        } 
+    }
+});
